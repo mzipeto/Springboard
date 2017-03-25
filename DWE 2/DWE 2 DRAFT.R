@@ -18,6 +18,7 @@ count ( filter(titan, titan$embarked == "S"))
 
 titan$embarked <- sapply()
 
+
 titan$embarked <- sub("^$", "S", titan$embarked)
 
 unique(titan$embarked)
