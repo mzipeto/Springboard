@@ -112,6 +112,8 @@ data_byact <- master_data %>%
   group_by(ActivityName) %>%
   summarise_each(funs(mean))
 
+write_csv(data_byact_bysubj, "~/R/Springboard/DWE 3/DWE3 Tidy Data Set.csv")
+
 
 #5: Submit on github
 #Put all of your code for steps 1-4 above in a single R script file called run_analysis.R. In a single github repository, add the following:
