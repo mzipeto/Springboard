@@ -95,7 +95,7 @@ remove(test_set)
 #I already did this when I built my data structure.
 
 
-#4: Create tidy data set
+# 4: Create tidy data set
 #From the data set in step 3, creates a second, independent tidy data set with the average of each variable#
 #for each activity and each subject. 
 
@@ -112,14 +112,5 @@ data_byact <- master_data %>%
   group_by(ActivityName) %>%
   summarise_each(funs(mean))
 
+#Output data to CSV file
 write_csv(data_byact_bysubj, "~/R/Springboard/DWE 3/DWE3 Tidy Data Set.csv")
-
-
-#5: Submit on github
-#Put all of your code for steps 1-4 above in a single R script file called run_analysis.R. In a single github repository, add the following:
-
-#  The tidy data set which is the result of steps 1-4
-#Your run_analysis.R script
-#A code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
-#A README.md file, that explains how all of the scripts work and how they are connected. 
-#Submit a link to your github repository containing all of these 4 deliverables.
