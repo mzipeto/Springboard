@@ -8,22 +8,21 @@ library(dplyr)
 sales <- read_csv("~/R/Springboard/Rest/Rest Sales 1 Data.csv", col_names = TRUE)
 sales <- tbl_df(sales)
 
-# Add week number. don't use any systems, since we have whole weeks:
+
+# Add week number column. Don't use any systems, since we have whole weeks:
   #just count from 1 to 52 and start over (use modulo)
 
 sales$WeekNum <- sapply(1:nrow(sales), function(x) (((x - 1) %% 52) + 1))
 
-#Convert string dates to dates: first separate into two columns, then detext to date
+
+#Convert string dates to dates: first separate into two columns
 sales <- separate(sales, Dates, into = c("WeekStartTEXT", "WeekEndTEXT"), sep = "-")
 
-#fix the dates: march through table and fix them
-
-#add blank date rows
+#add blank date columns 
 sales$WeekStart <- as.Date("2000-01-01")
 sales$WeekEnd <- as.Date("2000-01-01")
 
-#fieldYear <- min(sales$Year)
-
+#fix the dates: march sequentially through table and fix them
 for (i in 1:nrow(sales)){
   
   

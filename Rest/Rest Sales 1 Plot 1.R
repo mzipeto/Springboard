@@ -10,7 +10,9 @@ library(scales)
 sales <- read_csv("~/R/Springboard/Rest/Rest Sales 1 Data CLEAN.csv", col_names = TRUE)
 sales <- tbl_df(sales)
 
+
 #select data for plot
+
 
 #build plot 1: sales over time
 
@@ -41,4 +43,3 @@ ggplot(sales, aes(x = WeekNum, y = Sales, col = factor(Year))) +
   geom_vline(xintercept = seq(from = 13/24, to = (52 + 13/24), by = (13/3)), alpha = 0.5) +
   annotate(geom = "text", x = 2.6 + 4.35 * (0:11), y = 6000, label = format(ISOdate(2004,1:12,1),"%b"), size = 4) +
   annotate(geom = "rect", xmin = 43.5, xmax = 44.5, ymin = -Inf, ymax = +Inf, fill = "orange", alpha = 0.3)
-
