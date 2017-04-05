@@ -5,7 +5,7 @@ library(dplyr)
 
 
 # load file
-sales <- read_csv("~/R/Springboard/Rest/Rest Sales Data.csv", col_names = TRUE)
+sales <- read_csv("~/R/Springboard/Rest/Rest Sales 2 Data.csv", col_names = TRUE)
 sales <- tbl_df(sales)
 
 #Convert string dates to dates
@@ -55,4 +55,4 @@ sales <- select(sales, ReportDate, ReportYear, ReportMonth, ReportDay,
 
 
 #Output cleaned data
-write_csv(sales, "~/R/Springboard/Rest/Rest Sales Data CLEAN.csv")
+write_csv(sales, "~/R/Springboard/Rest/Rest Sales 2 Data CLEAN.csv")

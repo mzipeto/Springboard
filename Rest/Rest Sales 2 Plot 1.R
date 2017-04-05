@@ -6,7 +6,7 @@ library(ggplot2)
 
 
 # load file
-sales <- read_csv("~/R/Springboard/Rest/Rest Sales Data CLEAN.csv", col_names = TRUE)
+sales <- read_csv("~/R/Springboard/Rest/Rest Sales 2 Data CLEAN.csv", col_names = TRUE)
 sales <- tbl_df(sales)
 
 
